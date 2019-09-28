@@ -4,53 +4,65 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:open_appstore/open_appstore.dart';
 
-void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
+void main() => runApp(MyHomePage());
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
-  _MyAppState createState() => _MyAppState();
+  Widget build(BuildContext context) {
+    return MaterialApp();
+  }
 }
 
-class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+  final String title;
 
   @override
-  void initState() {
-    super.initState();
-    initPlatformState();
-  }
+  _MyHomePageState createState() => _MyHomePageState();
+}
 
-  // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {
-    String platformVersion;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    try {
-      platformVersion = await OpenAppstore.platformVersion;
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
-    }
+class _MyHomePageState extends State<MyHomePage> {
 
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
-    if (!mounted) return;
-
-    setState(() {
-      _platformVersion = platformVersion;
-    });
-  }
+  final AndroidController = TextEditingController();
+  final iOSController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        body: Center(
-          child: Text('Running on: $_platformVersion\n'),
-        ),
-      ),
-    );
+        home: new Scaffold(
+            body: new Center(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      new Container(
+                          width: 200.0,
+                          child: TextField(
+                            controller: AndroidController,
+                            decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'AndroidPackageName'
+                            ),
+                          )
+                      ),
+                      new Container(
+                          width: 200.0,
+                          child: TextField(
+                            controller: iOSController,
+                            decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'iOSPackageName'
+                            ),
+                          )
+                      ),
+                      RaisedButton(
+                          child: Text('Move to AppStore'),
+                          onPressed: () => OpenAppstore.launch(androidAppId: AndroidController.text, iOSAppId: iOSController.text)
+                      )
+                    ]
+                )
+            )
+        ));
   }
 }
