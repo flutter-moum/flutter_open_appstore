@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/open_appstore.iml" filepath="$PROJECT_DIR$/.idea/open_appstore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/open_appstore.iml" filepath="$PROJECT_DIR$/open_appstore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/open_appstore_android.iml" filepath="$PROJECT_DIR$/android/open_appstore_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/android/open_appstore_example_android.iml" filepath="$PROJECT_DIR$/example/android/open_appstore_example_android.iml" />
     </modules>
   </component>
 </project>
