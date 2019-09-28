@@ -10,4 +10,9 @@ class OpenAppstore {
     final String version = await _channel.invokeMethod('getPlatformVersion');
     return version;
   }
+
+  static void launch({String androidAppId, String iOSAppId}) async {
+    await _channel.invokeMethod(
+        'openappstore', {'android_id': androidAppId, 'ios_id':iOSAppId});
+  }
 }
