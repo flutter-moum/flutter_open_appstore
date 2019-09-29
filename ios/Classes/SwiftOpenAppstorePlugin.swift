@@ -2,6 +2,8 @@ import Flutter
 import UIKit
 
 public class SwiftOpenAppstorePlugin: NSObject, FlutterPlugin {
+    var pass: Bool = false
+    
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "open_appstore", binaryMessenger: registrar.messenger())
     let instance = SwiftOpenAppstorePlugin()
