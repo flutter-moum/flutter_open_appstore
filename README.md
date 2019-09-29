@@ -27,7 +27,7 @@ static void launch({String androidAppId, String iOSAppId}) async {
 
 ---
 
-#### iOS available 
+### iOS available 
 
 iOS is available from version 10. 
 
