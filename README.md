@@ -1,6 +1,6 @@
 # open_appstore
 
-A Flutter plugin for opening Appstore or PlayStore
+A Flutter plugin for opening the AppStore or PlayStore
 
 ---
 
@@ -15,7 +15,7 @@ import 'package:open_appstore/open_appstore.dart';
 You can open the AppStore or PlayStore in your Dart code.  
 To open the App Store page, you can pass the app Id.
 ```dart
-OpenAppstore.launch(androidAppId: "com.facebook.katana&hl=ko", iOSAppId: iOSController.text)
+OpenAppstore.launch(androidAppId: "com.facebook.katana&hl=ko", iOSAppId: "284882215")
 ```
 
 ```dart
@@ -50,17 +50,9 @@ if #available(iOS 10.0, *) {
 
 ---
 
-### API details 
-
-
-
----
-
 ### Issues and feedback
 
 Please file [issues](https://github.com/flutter-moum/flutter_open_appstore/issues) to send feedback or report a bug. Thank you!
-
-## 
 
 ---
 
