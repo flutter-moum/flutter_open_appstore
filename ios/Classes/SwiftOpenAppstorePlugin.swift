@@ -5,7 +5,7 @@ public class SwiftOpenAppstorePlugin: NSObject, FlutterPlugin {
     var pass: Bool = false
     
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "flutter_open_appstore", binaryMessenger: registrar.messenger())
+    let channel = FlutterMethodChannel(name: "flutter.moum.open_appstore", binaryMessenger: registrar.messenger())
     let instance = SwiftOpenAppstorePlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }

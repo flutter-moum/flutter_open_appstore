@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:open_appstore/open_appstore.dart';
 
 void main() {
-  const MethodChannel channel = MethodChannel('open_appstore');
+  const MethodChannel channel = MethodChannel('flutter.moum.open_appstore');
 
   setUp(() {
     channel.setMockMethodCallHandler((MethodCall methodCall) async {
