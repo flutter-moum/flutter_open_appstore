@@ -19,7 +19,7 @@ public class OpenAppstorePlugin implements MethodCallHandler {
   }
 
   public static void registerWith(Registrar registrar) {
-    final MethodChannel channel = new MethodChannel(registrar.messenger(), "open_appstore");
+    final MethodChannel channel = new MethodChannel(registrar.messenger(), "flutter_open_appstore");
     channel.setMethodCallHandler(new OpenAppstorePlugin(registrar));
   }
 
