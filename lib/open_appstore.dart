@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 
 class OpenAppstore {
   static const MethodChannel _channel =
-      const MethodChannel('open_appstore');
+      const MethodChannel('flutter_open_appstore');
 
   static Future<String> get platformVersion async {
     final String version = await _channel.invokeMethod('getPlatformVersion');
