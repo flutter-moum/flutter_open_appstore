@@ -40,6 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           width: 200.0,
                           child: TextField(
                             controller: AndroidController,
+                            textAlign: TextAlign.center,
                             decoration: InputDecoration(
                                 border: InputBorder.none,
                                 hintText: 'AndroidPackageName'
@@ -50,19 +51,24 @@ class _MyHomePageState extends State<MyHomePage> {
                           width: 200.0,
                           child: TextField(
                             controller: iOSController,
+                            textAlign: TextAlign.center,
                             decoration: InputDecoration(
                                 border: InputBorder.none,
-                                hintText: 'iOSPackageName'
+                                hintText: 'iOSPackageName',
                             ),
                           )
                       ),
-                      RaisedButton(
-                          child: Text('Move to AppStore'),
-                          onPressed: () => OpenAppstore.launch(androidAppId: AndroidController.text, iOSAppId: iOSController.text)
+                      new Container(
+                        width: 200.0,
+                          child: RaisedButton(
+                              child: Text('Move to AppStore'),
+                              color: Colors.blue,
+                              onPressed: () => OpenAppstore.launch(androidAppId: AndroidController.text, iOSAppId: iOSController.text)
                       )
-                    ]
-                )
+                )]
             )
-        ));
+        )
+    )
+    );
   }
 }

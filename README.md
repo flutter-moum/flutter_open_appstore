@@ -4,8 +4,6 @@ A Flutter plugin for opening the AppStore or PlayStore
 
 ---
 
-[![Pub](https://img.shields.io/pub/v/open_appstore.svg)](https://pub.dev/packages/open_appstore)
-
 ### Usage 
 
 Import the library via
