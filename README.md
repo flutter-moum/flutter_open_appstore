@@ -1,48 +1,35 @@
 # open_appstore
 
-A new flutter plugin project.
+A Flutter plugin for opening the AppStore or PlayStore
 
 ---
 
 [![Pub](https://img.shields.io/pub/v/open_appstore.svg)](https://pub.dev/packages/open_appstore)
 
-## Getting Started
-
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
-
----
-
-A Flutter plugin for open Appstore or PlayStore
-
----
-
 ### Usage 
 
-Use the plugin
+Import the library via
 
 ```dart
 import 'package:open_appstore/open_appstore.dart';
 ```
 
-You can open the AppStore or PlayStore in your Dart code.
+You can open the AppStore or PlayStore in your Dart code.  
+To open the App Store page, you can pass the app Id.
+```dart
+OpenAppstore.launch(androidAppId: "com.facebook.katana&hl=ko", iOSAppId: "284882215")
+```
 
 ```dart
 static void launch({String androidAppId, String iOSAppId}) async {
     await _channel.invokeMethod(
-        'openappstore', {'android_id': androidAppId, 'ios_id':iOSAppId});
+        'openappstore', {'android_id': androidAppId, 'ios_id': iOSAppId});
   }
 ```
 
 ---
 
-#### iOS available 
+### iOS available 
 
 iOS is available from version 10. 
 
@@ -58,14 +45,8 @@ if #available(iOS 10.0, *) {
 ---
 
 ### ScreenShots
-
+<img width="300" src="https://user-images.githubusercontent.com/37133536/65833542-6ed3d580-e30c-11e9-8ccd-2fcb2e5d77b4.png"><img width="300" src="https://user-images.githubusercontent.com/37133536/65833543-6ed3d580-e30c-11e9-88a5-21c9c54c2bae.png">
 * ~~iOS can't show in simulator~~
-
-
-
----
-
-### API details 
 
 
 
@@ -75,9 +56,6 @@ if #available(iOS 10.0, *) {
 
 Please file [issues](https://github.com/flutter-moum/flutter_open_appstore/issues) to send feedback or report a bug. Thank you!
 
-## 
-
 ---
 
 ### License
-
