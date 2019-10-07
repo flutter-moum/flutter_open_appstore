@@ -4,6 +4,8 @@ A new flutter plugin project.
 
 ---
 
+[![Pub](https://img.shields.io/pub/v/open_appstore.svg)](https://pub.dev/packages/open_appstore)
+
 ## Getting Started
 
 This project is a starting point for a Flutter
