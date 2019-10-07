@@ -57,4 +57,3 @@ Please file [issues](https://github.com/flutter-moum/flutter_open_appstore/issue
 ---
 
 ### License
-
