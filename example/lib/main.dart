@@ -16,16 +16,13 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  final AndroidController = TextEditingController();
+  final androidController = TextEditingController();
   final iOSController = TextEditingController();
 
   @override
@@ -39,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       new Container(
                           width: 200.0,
                           child: TextField(
-                            controller: AndroidController,
+                            controller: androidController,
                             textAlign: TextAlign.center,
                             decoration: InputDecoration(
                                 border: InputBorder.none,
@@ -63,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: RaisedButton(
                               child: Text('Move to AppStore'),
                               color: Colors.blue,
-                              onPressed: () => OpenAppstore.launch(androidAppId: AndroidController.text, iOSAppId: iOSController.text)
+                              onPressed: () => OpenAppstore.launch(androidAppId: androidController.text, iOSAppId: iOSController.text)
                       )
                 )]
             )
