@@ -1,7 +1,10 @@
 name: open_appstore
 description: A Flutter plugin for opening Apple App Store or Google Play Store.
-version: 1.0.0
-author: chokyungjin<chokj1472@gmail.com>, moonyoungCHAE<Xpf_fl@naver.com>, FlutterMoum Group<fluttermoum@gmail.com>
+version: 1.0.2
+authors: 
+- chokyungjin <chokj1472@gmail.com>
+- moonyoungCHAE <xpf_fl@naver.com>
+- FlutterMoum Group <fluttermoum@gmail.com>
 homepage: https://github.com/flutter-moum/flutter_open_appstore
 
 environment:
