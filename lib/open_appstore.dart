@@ -12,7 +12,11 @@ class OpenAppstore {
   }
 
   static void launch({String androidAppId, String iOSAppId}) async {
-    await _channel.invokeMethod(
+    try {
+      await _channel.invokeMethod(
         'openappstore', {'android_id': androidAppId, 'ios_id':iOSAppId});
+    } on PlatformException catch (e) {
+       throw StateError(e.toString());
+    }
   }
 }
