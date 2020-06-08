@@ -29,7 +29,7 @@ public class OpenAppstorePlugin implements MethodCallHandler {
       result.success("Android " + android.os.Build.VERSION.RELEASE);
     }
     else if (call.method.equals("openappstore")) {
-      result.success("Android " + android.os.Build.VERSION.RELEASE);	      String android_id = call.argument("android_id");
+      String android_id = call.argument("android_id");
       try {
         mRegistrar.activity().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + android_id)));
       } catch (android.content.ActivityNotFoundException e) {
