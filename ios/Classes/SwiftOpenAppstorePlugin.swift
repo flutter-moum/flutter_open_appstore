@@ -12,7 +12,6 @@ public class SwiftOpenAppstorePlugin: NSObject, FlutterPlugin {
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     if (call.method == "getPlatformVersion"){
-        print("111")
         result("iOS" + UIDevice.current.systemVersion)
     }else if (call.method == "openappstore"){
         guard let args = call.arguments else {
