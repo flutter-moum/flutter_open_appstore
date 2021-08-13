@@ -48,7 +48,6 @@ public class OpenAppstorePlugin implements FlutterPlugin {
               context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + android_id)));
             }
           }
-          result.success(null);
         }
         else {
           result.notImplemented();
